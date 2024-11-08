@@ -4,18 +4,20 @@ description: Understand what happens to your got connection when your license pe
 author: mberdugo
 ms.author: monaberdugo
 ms.reviewer: NimrodShalit
+ms.service: fabric
+ms.subservice: cicd
 ms.topic: conceptual 
-ms.date: 08/24/2023
+ms.date: 06/06/2024
 ms.custom: build-2023
 ---
 
 # Git integration license change
 
-You can only connect to Git repos if you have a valid Premium license. If your license expires or you change your license to a license that doesn't include Git integration, you can no longer connect to Git repos. This applies to trial licenses as well.
+You can only connect to Git repos if you have a valid Premium license. If your license expires or if you change your license to a license that doesn't include Git integration, you can no longer connect to Git repos. This applies to trial licenses as well.
 
 ## What happens when your license expires
 
-If your workspace is connected to a Git repo and then your license expires, or you change to a different license that doesn't include Git integration, the Git-integration feature stops working and you see the following changes in your workspace homepage:
+If your workspace is connected to a Git repo, and then your license expires or you change to a different license that doesn't include Git integration, the Git-integration feature stops working and you see the following changes in your workspace homepage:
 
 ### Source control view
 
@@ -40,6 +42,6 @@ At the bottom of the workspace, instead of the [sync information](./git-integrat
 Without a valid Premium license, none of the Git integration features work. Unless you renew or upgrade your license, all you can do is [disconnect](./git-get-started.md#disconnect-a-workspace-from-git). To disconnect, go to the **Git integration** settings and select **Disconnect**.  
 Your workspace returns to a disconnected state and you can continue working in the workspace without Git.
 
-## Next steps
+## Related content
 
 [Manage Git branches](./manage-branches.md)

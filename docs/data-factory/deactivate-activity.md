@@ -1,19 +1,19 @@
 ---
-title: Deactivate an Activity 
+title: Deactivate an Activity
 description: Learn how to deactivate an activity to exclude from pipeline run and validation.
-author: chez-charlie
-ms.author: chez
+author: kromerm
+ms.author: makromer
 ms.topic: conceptual
-ms.date: 09/26/2023
+ms.custom:
+  - ignite-2023
+ms.date: 11/15/2023
 ---
 
 # Deactivate an activity
 
 You can now deactivate one or more activities from a pipeline, and we skip them during validation and during pipeline run. This feature significantly improves pipeline developer efficiency, allowing customers to comment out part of the pipeline, without deleting it from the canvas. You may choose to reactivate them at a later time.
 
-[!INCLUDE [df-preview-warning](includes/data-factory-preview-warning.md)]
-
-:::image type="content" source="./media/deactivate-activity/deactivate-01-overview.png" alt-text="Screenshot showing an inactive activity in pipeline":::
+:::image type="content" source="./media/deactivate-activity/deactivate-01-overview.png" alt-text="Screenshot showing an inactive activity in pipeline.":::
 
 ## Deactivate and reactivate
 
@@ -35,7 +35,7 @@ Alternatively, you can deactivate multiple activities with right click.
 1. Select _Deactivate_ to deactivate them all
 1. To fine tune the settings for _Mark activity as_, go to **General** tab of the activity, and make appropriate changes
 
-:::image type="content" source="./media/deactivate-activity/deactivate-04-setup-multiple.png" alt-text="Screenshot of how to deactivatee multiple activities all at once.":::
+:::image type="content" source="./media/deactivate-activity/deactivate-04-setup-multiple.png" alt-text="Screenshot of how to deactivate multiple activities all at once.":::
 
 In both cases, you do need to deploy the changes to deactivate the parts during pipeline run.
 
@@ -67,6 +67,6 @@ Deactivation is a powerful tool for pipeline developer. It allows developers to 
 
 An inactive activity never actually runs. This means the activity won't have an error field, or its typical output fields. Any references to missing fields may throw errors downstream.
 
-## Next steps
+## Related content
 
-[How to monitor pipeline runs](monitor-pipeline-runs.md)
+- [How to monitor pipeline runs](monitor-pipeline-runs.md)

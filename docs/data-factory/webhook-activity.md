@@ -5,14 +5,14 @@ author: nabhishek
 ms.author: abnarain
 ms.reviewer: jburchel
 ms.topic: how-to
-ms.date: 09/22/2023
+ms.custom:
+  - ignite-2023
+ms.date: 11/15/2023
 ---
 
 # Use the WebHook activity to call an endpoint and wait for it to complete
 
 A webhook activity can control the execution of pipelines through custom code. With the webhook activity, code can call an endpoint and pass it a callback URL. The pipeline run waits for the callback invocation before it proceeds to the next activity.
-
-[!INCLUDE [df-preview-warning](includes/data-factory-preview-warning.md)]
 
 ## Prerequisites
 
@@ -43,11 +43,11 @@ Refer to the [**General** settings](activity-overview.md#general-settings) guida
 
 ### Web activity settings
 
-1. Select the **Settings** tab, select an existing connection from the **Connection** dropdown, or use the **+ New** button to create a new connection, and specify its configuration details.
+1. Select the **Settings** tab, select an existing connection from the **Connection** dropdown, or create a new connection, and specify its configuration details.
 
    :::image type="content" source="media/webhook-activity/choose-web-connection-and-configure.png" alt-text="Screenshot showing the WebHook activity settings tab highlighting the tab, and where to choose a new connection.":::
 
-1. When you choose **+ New** to create a new connection, you see the connection creation dialog where you can provide the base URL and credentials to connect.
+1. When you create a new connection, you see the connection creation dialog where you can provide the base URL and credentials to connect.
 
    :::image type="content" source="media/webhook-activity/create-new-connection.png" alt-text="Screenshot showing the new connection dialog for the WebHook activity.":::
 
@@ -61,6 +61,6 @@ Typically, you use the output of the WebHook activity with other activities, but
 
 :::image type="content" source="media/lookup-activity/pipeline-home-tab.png" alt-text="Screenshot showing the Home tab in the pipeline editor with the tab name, Save, Run, and Schedule buttons highlighted.":::
 
-## Next steps
+## Related content
 
-[How to monitor pipeline runs](monitor-pipeline-runs.md)
+- [How to monitor pipeline runs](monitor-pipeline-runs.md)

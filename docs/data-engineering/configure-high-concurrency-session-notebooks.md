@@ -1,18 +1,18 @@
 ---
 title: Configure high concurrency mode for notebooks
-description: Learn how to configure and run high concurrency mode to reuse session across multiple notebooks for Data Engineering and Data Science workloads in Fabric
+description: Learn how to configure and run high concurrency mode to reuse session across multiple notebooks for Data Engineering and Data Science workloads in Fabric.
 ms.reviewer: snehagunda
 ms.author: saravi
 author: santhoshravindran7
-ms.topic: concepts
-ms.date: 07/16/2023
+ms.topic: conceptual
+ms.custom:
+  - ignite-2023
+ms.date: 06/07/2024
 ---
 
 # Configure high concurrency mode for Fabric notebooks
 
 When you run a notebook in Microsoft Fabric, an Apache Spark session is started and is used to run the queries submitted as part of the notebook cell executions. With High Concurrency Mode enabled, there's no need to start new spark sessions every time to run a notebook.
-
-[!INCLUDE [preview-note](../includes/preview-note.md)]
 
 If you already have a High Concurrency session running, you could attach notebooks to the high concurrency session getting a spark session instantly to run the queries and achieve a greater session utilization rate.
 
@@ -22,7 +22,14 @@ If you already have a High Concurrency session running, you could attach noteboo
 > The high concurrency mode-based session sharing is always within a single user boundary.
 > The notebooks need to have matching spark configurations, should be part of the same workspace, share the same default lakehouse and libraries to share a single spark session.
 
-:::image type="content" source="media\high-concurrency-mode-for-notebooks\high-concurrency-mode-sharing-conditions-definition.png" alt-text="Animation showing sharing conditions for high concurrency session for notebooks.":::
+## Session sharing conditions
+
+For notebooks to share a single Spark session, they must:
+
+* Be run by the same user.
+* Have the same default lakehouse. Notebooks without a default lakehouse can share sessions with other notebooks that don't have a default lakehouse.
+* Have the same Spark compute configurations.
+* Have the same library packages. You can have different inline library installations as part of notebook cells and still share the session with notebooks having different library dependencies.
 
 ## Configure high concurrency mode
 
@@ -56,7 +63,7 @@ By default, all the Fabric workspaces are enabled with high concurrency Mode. Us
 
 1. Select **New high concurrency session**.
 
-1. Once the high concurrency session has started, you could now add upto 10 notebooks in the high concurrency session.
+1. Once the high concurrency session has started, you could now add upto 5 notebooks in the high concurrency session.
 
    :::image type="content" source="media\high-concurrency-mode-for-notebooks\start-new-high-concurrency-session-from-sessions.png" alt-text="Screenshot showing the option to start a new high concurrency session in Notebook Menu." lightbox="media\high-concurrency-mode-for-notebooks\start-new-high-concurrency-session-from-sessions.png":::
 
@@ -94,7 +101,7 @@ Monitoring and debugging are often a non-trivial task when you are running multi
 
    :::image type="content" source="media\high-concurrency-mode-for-notebooks\view-related-notebooks-in-high-concurrency-mode.png" alt-text="Screenshot showing the all related notebooks for high concurrency session in the monitoring detail view." lightbox="media\high-concurrency-mode-for-notebooks\view-related-notebooks-in-high-concurrency-mode.png":::
 
-## Next steps
+## Related content
 
 In this document, you get a basic understanding of a session sharing through high concurrency mode in notebooks. Advance to the next articles to learn how to create and get started with your own Data Engineering experiences using Lakehouse and Notebooks:
 
